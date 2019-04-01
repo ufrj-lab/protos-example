@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+
+import "google/protobuf/struct.proto";
+
+
+package example;
+
+
+service Example {
+    rpc one (OneRequest) returns (OneReply) {}
+    rpc two (TwoRequest) returns (TwoReply) {}
+}
+
+
+message OneRequest {
+    required string name = 1;
+}
+message OneReply {
+    required string response = 1;
+}
+
+
+message TwoRequest {
+    required string name = 1;
+}
+message TwoReply {
+    required Struct response = 1;
+}
+

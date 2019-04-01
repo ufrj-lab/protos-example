@@ -1,0 +1,23 @@
+{
+  "name": "@ufrj/proto-example",
+  "version": "0.0.0",
+  "description": "Exemplo de definições Protobuf.js empacotadas",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rm -fr lib && mkdir lib && pbjs -o lib/index.js -w commonjs -t json-module src/index.proto && pbjs -t static-module -w commonjs src/index.proto | pbts -o lib/index.d.ts -"
+  },
+  "keywords": [
+    "gRPC",
+    "TypeScript",
+    "JavaScript",
+    "API"
+  ],
+  "author": {
+    "name": "Vinícius Carvalho",
+    "email": "vinicius.fc93@gmail.com"
+  },
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "protobufjs": "^6.8.8"
+  }
+}
